@@ -1,0 +1,119 @@
+
+
+a {
+  color: #1772d0;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #f09228;
+  text-decoration: none;
+}
+
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+strong {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+h2 {
+  margin: 0;
+  font-weight: normal;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+  text-decoration: underline;
+  text-decoration-color: rgb(214, 78, 214);
+}
+
+.papertitle {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.name {
+  padding-top: 20px;
+  margin: 0;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 50px;
+  
+}
+
+.one {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.two {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.fade {
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+span.highlight {
+  background-color: #ffffd0;
+}
+
+ /* Style for the container holding the logos */
+ .logo-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px; /* Space between logos */
+  padding: 20px;
+}
+
+/* Style for each logo */
+.logo-container img {
+  width: 70px; 
+  height: auto;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+/* Add a hover effect */
+.logo-container img:hover {
+  transform: scale(1.4); /* Slightly enlarges the logo on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .logo-container img {
+    width: 70px; /* Resize logos for mobile */
+  }
+}
+/* Style for smaller bar chart */
+#accuracyChart {
+  width: 500px;
+  height: 250px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Style for smaller doughnut chart (speed meter) */
+#responseTimeChart {
+  width: 500px;
+  height: 250px;
+  display: block;
+  margin: 0 auto;
+}

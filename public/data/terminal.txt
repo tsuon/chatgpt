@@ -1,0 +1,27 @@
+brew services start mongodb/brew/mongodb-community@6.0
+Change directory: cd /path/to/your/directory
+Change directory to desktop : cd ~/Desktop
+Navigate into the project folder: cd myProject
+List the files in the directory: ls
+
+install Mongoose
+npm install mongoose
+
+Check if you have Node.js installed: Node -v
+This will show version of Node.js
+
+Check if you have "npm" installed: npm -v
+This will show version of npm installed
+
+Check if you have "express" installed: npm list express
+This will show express version number such as express@4.21.1
+
+If you want to check if Express is installed globally on your system, use:
+npm list -g express
+
+Running Node.js files: node yourFileName.js
+For example: node server.js
+Listening for port in used: lsof -i :2500 looking for PID (Process ID) ex:48465
+
+MongoDB connection string:
+mongodb+srv://thatsuon:<db_password>@chatgptee.5k5az.mongodb.net/?retryWrites=true&w=majority&appName=ChatGPTEE

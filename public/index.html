@@ -1,0 +1,410 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>That Suon</title>
+
+    <meta name="author" content="That Suon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+    
+  </head>
+
+  <body>
+    <table style="width:100%; border:0; border-spacing:0; border-collapse:separate; margin:auto;">
+        <tbody>
+          <tr style="padding:0;">
+            <td style="padding:0;">
+              <table style="width:100%; border:0; border-spacing:0; border-collapse:separate; margin:auto;">
+                <tbody>
+                  <tr style="padding:0; background-color:rgb(251, 246, 239);">
+                    <td style="padding:2.5%; width:100%; max-width: 60%; vertical-align: center;">
+                      <p class="name" style="text-align: left;">
+                        THAT SUON
+                      </p>
+                      <p>
+                        That Suon is an IT student at York University who is currently working on a project related to AI and ChatGPT. He has a solid foundation in web technologies, including HTML, CSS, and JavaScript, as well as proficiency in Node.js and other server-side programming languages. His expertise allows him to handle both front-end and back-end aspects of web development, making him well-equipped for his AI-related projects.
+                      </p>
+                      <p>
+                        At York University, I've worked on <a href="https://openai.com/news/">ChatGPT API</a>,  <a href="https://www.w3schools.com/html/default.asp">HTML & CSS</a>, <a href="https://www.tableau.com/learn/articles/data-science-blogs">Data Science</a>, <a href="https://www.tableau.com/learn/articles/blogs-about-machine-learning-artificial-intelligence">Machine Learning</a>.
+                      </p>
+                      <p style="text-align:left;">
+                        <a href="mailto:tsuon@my.yorku.ca"><i class="fas fa-envelope"></i> Email</a> &nbsp;/&nbsp;
+                        <a href="data/tsuoncv.pdf"><i class="fas fa-file-alt"></i> CV</a> &nbsp;/&nbsp;
+                        <a href="data/bio.txt"><i class="fas fa-info-circle"></i> Bio</a> &nbsp;/&nbsp;
+                        <a href="data/terminal.txt"><i class="fa-solid fa-terminal"></i> Terminal</a> &nbsp;/&nbsp;
+                        <a href="https://northfield.biz/newsroom/"><i class="fas fa-newspaper"></i> Newsroom</a> &nbsp;/&nbsp;
+                        <a href="https://github.com/tsuon/tsuon.github.io.git"><i class="fab fa-github"></i> Github</a> &nbsp;/&nbsp;
+                        <a href="data/Assignment.pdf"><i class="fa fa-tasks"></i>Assignment</a> &nbsp;&nbsp;
+                      </p>
+                      <p style="text-align: left;" class="logo-container">
+                        <img src="images/chatGPT.png" alt="Logo 1">
+                        <img src="images/JavaScript.png" alt="Logo 2">
+                        <img src="images/json.svg" alt="Logo 3">
+                        <img src="images/nodejs.png" alt="Logo 4">
+                        <img src="images/python.png" alt="Logo 5">
+                        <img src="images/mongodb.png" alt="Logo 6">
+                        <img src="images/sql.png" alt="Logo 7">
+                      </p>
+                      
+                    </td>
+                    <td style="padding:2.5%;width:40%;max-width:40%">
+                        <a href="images/tsuon.jpg"><img style="width:100%;max-width:50%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/tsuon.jpg" class="hoverZoomLink"></a>
+                      </td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;background-color:antiquewhite;"><tbody>
+              <tr>
+              <td style="padding:20px;width:95%;vertical-align:middle">
+                <h2>Research</h2>
+                <p>
+                   My research aims to assess ChatGPT's performance in different domains, such as History, Social Science, and Computer Security. By leveraging MongoDB for data storage and Node.js with Express.js for server-side interactions, you're able to evaluate the accuracy and response times of ChatGPT's answers. The project integrates the ChatGPT API to automatically retrieve responses to pre-set questions, allowing you to measure performance and compare it to expected answers. This will provide insights into ChatGPT's efficiency, accuracy, and potential areas for improvement.
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        
+        </table>
+
+            <div>
+         
+            
+            </div>
+
+          <table style="width:90%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    
+	
+
+    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()" style="background-color: rgb(255, 255, 255);">
+      
+      <td style="padding:20px;width:75%;vertical-align:middle;">
+        <section id="chatgpt-efficiency">
+            <h2>ChatGPT Efficiency Evaluation</h2>
+            <h3>Research Approach</h3>
+            <p>This evaluation uses Node.js for server-side logic, MongoDB as the database, and the ChatGPT API for responses. The project analyzes response times and accuracy across various topics.</p>
+            
+            <h3>Dataset Overview</h3>
+            <p>The dataset includes questions from History, Social Science, and Computer Security, with each domain containing 50 questions. These evaluations aim to measure how well ChatGPT performs in these areas.</p>
+        
+            
+            <body>
+              
+          
+              <section id="question-fetch">
+                  <button id="fetchQuestion">Fetch Question</button>
+                  <div id="questionContainer"></div>
+              </section>
+          
+              <section id="statistics">
+                  <h2>ChatGPT Performance Statistics</h2>
+                  <button id="fetchStats">Fetch Statistics</button>
+                  <div id="statsContainer"></div>
+              </section>
+          
+            
+                 <script>
+    document.getElementById('fetchQuestion').addEventListener('click', async () => {
+        try {
+            const questionResponse = await fetch('http://localhost:3000/api/question/random');
+            const questionData = await questionResponse.json();
+            if (questionData.success) {
+                const question = questionData.question;
+                document.getElementById('questionContainer').innerHTML = `
+                    <p><strong>Question:</strong> ${question.question}</p>
+                    <p><strong>Expected Answer:</strong> ${question.expectedAnswer}</p>
+                    <p><strong>ChatGPT Response:</strong> <span id="chatGPTResponse">Loading...</span></p>
+                    <p><strong>Validation Result:</strong> <span id="validationResult">Validating...</span></p>
+                `;
+                const validateResponse = await fetch('http://localhost:3000/api/validate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question: question.question, expectedAnswer: question.expectedAnswer }),
+                });
+                const validateData = await validateResponse.json();
+                if (validateData.success) {
+                    document.getElementById('chatGPTResponse').textContent = validateData.chatGPTResponse;
+                    document.getElementById('validationResult').textContent = validateData.isValid ? 'Correct!' : 'Incorrect!';
+                } else {
+                    document.getElementById('validationResult').textContent = 'Validation failed.';
+                }
+            } else {
+                document.getElementById('questionContainer').textContent = 'No questions available.';
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            document.getElementById('questionContainer').textContent = 'Network error. Unable to fetch question.';
+        }
+    });
+
+    // document.getElementById('fetchStats').addEventListener('click', async () => {
+    //     try {
+    //         const statsResponse = await fetch('http://localhost:3000/api/statistics');
+    //         const statsData = await statsResponse.json();
+    //         if (statsData.success) {
+    //             const statsHtml = statsData.statistics.map(stat => `
+    //                 <p><strong>Domain:</strong> ${stat.domain} - <strong>Accuracy:</strong> ${stat.accuracy.toFixed(2)}%</p>
+    //             `).join('');
+    //             document.getElementById('statsContainer').innerHTML = statsHtml;
+    //         } else {
+    //             document.getElementById('statsContainer').textContent = 'Error fetching statistics.';
+    //         }
+    //     } catch (error) {
+    //         console.error('Error:', error);
+    //         document.getElementById('statsContainer').textContent = 'Network error.';
+    //     }
+    // });
+    document.getElementById('fetchStats').addEventListener('click', async () => {
+    try {
+        const statsResponse = await fetch('http://localhost:3000/api/statistics');
+        const statsData = await statsResponse.json();
+
+        if (statsData.success) {
+            // Generate the stats HTML based on the correct data
+            const statsHtml = statsData.statistics.map(stat => `
+                <p><strong>Average Response Time:</strong> ${stat.averageResponseTime}ms</p>
+                <p><strong>Accuracy Rate:</strong> ${(stat.accuracyRate * 100).toFixed(2)}%</p>
+            `).join('');
+
+            document.getElementById('statsContainer').innerHTML = statsHtml;
+        } else {
+            document.getElementById('statsContainer').textContent = 'Error fetching statistics.';
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('statsContainer').textContent = 'Network error.';
+    }
+});
+
+</script>
+
+<section id="results">
+  <div class="chart-container">
+      <p>Accuracy Rates:</p>
+      <canvas id="accuracyChart"></canvas>
+      <p>Average Response Time:</p>
+      <canvas id="responseTimeChart"></canvas>
+  </div>
+</section>
+
+<script>
+  // document.getElementById('fetchStats').addEventListener('click', async () => {
+  //     try {
+  //         const statsResponse = await fetch('http://localhost:3000/api/statistics');
+  //         const statsData = await statsResponse.json();
+
+  //         if (statsData.success) {
+  //             const labels = statsData.statistics.map(stat => stat._id);
+  //             const accuracyRates = statsData.statistics.map(stat => stat.accuracyRate);
+  //             const responseTimes = statsData.statistics.map(stat => stat.averageResponseTime);
+
+  //             // Update Accuracy Chart
+  //             const ctx1 = document.getElementById('accuracyChart').getContext('2d');
+  //             new Chart(ctx1, {
+  //                 type: 'bar',
+  //                 data: {
+  //                     labels: labels,
+  //                     datasets: [{
+  //                         label: 'Accuracy Rate (%)',
+  //                         data: accuracyRates,
+  //                         backgroundColor: ['#ff6384', '#36a2eb', '#cc65fe'],
+  //                     }]
+  //                 },
+  //                 options: {
+  //                     scales: { y: { beginAtZero: true, max: 100 } }
+  //                 }
+  //             });
+
+  //             // Update Response Time Chart
+  //             const ctx2 = document.getElementById('responseTimeChart').getContext('2d');
+  //             new Chart(ctx2, {
+  //                 type: 'line',
+  //                 data: {
+  //                     labels: labels,
+  //                     datasets: [{
+  //                         label: 'Average Response Time (ms)',
+  //                         data: responseTimes,
+  //                         borderColor: '#4bc0c0',
+  //                         fill: false
+  //                     }]
+  //                 },
+  //                 options: {
+  //                     scales: { y: { beginAtZero: true } }
+  //                 }
+  //             });
+
+  //         } else {
+  //             document.getElementById('statsContainer').textContent = 'Error fetching statistics.';
+  //         }
+  //     } catch (error) {
+  //         console.error('Error:', error);
+  //         document.getElementById('statsContainer').textContent = 'Network error.';
+  //     }
+  // });
+  document.getElementById('fetchStats').addEventListener('click', async () => {
+    try {
+        // Disable button to prevent multiple clicks until response is received
+        const fetchButton = document.getElementById('fetchStats');
+        fetchButton.disabled = true;
+
+        const statsResponse = await fetch('http://localhost:3000/api/statistics', {
+            method: 'GET',
+            headers: {
+                'Cache-Control': 'no-cache', // Ensure fresh fetch each time
+            },
+        });
+
+        if (!statsResponse.ok) {
+            throw new Error('Failed to fetch statistics');
+        }
+
+        const statsData = await statsResponse.json();
+
+        if (statsData.success) {
+            const labels = statsData.statistics.map((_, index) => `Domain ${index + 1}`);
+            const accuracyRates = statsData.statistics.map(stat => stat.accuracyRate * 100);
+            const responseTimes = statsData.statistics.map(stat => stat.averageResponseTime);
+
+            // Update Accuracy Chart
+            const ctx1 = document.getElementById('accuracyChart').getContext('2d');
+            new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Accuracy Rate (%)',
+                        data: accuracyRates,
+                        backgroundColor: ['#ff6384', '#36a2eb', '#cc65fe'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                stepSize: 10,
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Update Response Time Chart
+            const ctx2 = document.getElementById('responseTimeChart').getContext('2d');
+const responseTime = Math.max(...responseTimes); // Example: replace this with actual response time
+const maxResponseTime = Math.max(...responseTimes) + 100; // Set a maximum for the meter
+
+new Chart(ctx2, {
+    type: 'doughnut',
+    data: {
+        labels: ['Current Response', 'Remaining'], // Define segments
+        datasets: [{
+            data: [responseTime, maxResponseTime - responseTime], // Response and remaining
+            backgroundColor: ['#00ff00', '#e0e0e0'], // Green for speed, gray for remaining
+            borderWidth: 0, // Remove border for clean look
+        }]
+    },
+    options: {
+        responsive: true,
+        rotation: -90, // Start from the bottom
+        circumference: 180, // Only show half of the doughnut
+        cutout: '75%', // Create the inner circle
+        plugins: {
+            title: {
+                display: true,
+                text: `Response Time: ${responseTime} ms`, // Show response time
+                padding: {
+                    top: 20,
+                    bottom: 0
+                },
+                font: {
+                    size: 18
+                }
+            },
+            tooltip: {
+                enabled: false // Disable tooltips for simplicity
+            }
+        }
+    },
+    plugins: [{
+        id: 'textCenter', // Custom plugin for center text
+        beforeDraw(chart) {
+            const { width } = chart;
+            const ctx = chart.ctx;
+            ctx.save();
+            ctx.font = '18px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillStyle = '#000';
+            ctx.fillText(`${responseTime} ms`, width / 2, chart.chartArea.top + (chart.chartArea.height / 2));
+            ctx.restore();
+        }
+    }]
+});
+
+
+
+
+        } else {
+            document.getElementById('statsContainer').textContent = 'Error fetching statistics.';
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('statsContainer').textContent = 'Network error.';
+    } finally {
+        // Re-enable the button after the request is complete
+        const fetchButton = document.getElementById('fetchStats');
+        fetchButton.disabled = false;
+    }
+});
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+          </body>
+          
+        </section>
+      </td>
+    </tr>
+
+    
+
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+          <td style="padding:0px">
+            <br>
+            <p>&copy; 2024 That Suon</p>
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+  </body>
+</html>
